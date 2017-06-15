@@ -1,4 +1,4 @@
-
+[![N|Solid](http://p9.zdassets.com/hc/settings_assets/680652/200062887/j1ixQzAxY6SfuZ2YTKbDOQ-lending_club_logo_new.png)](https://nodesource.com/products/nsolid)
 # Overview
 The project focuses on economic analysis of two countries India and USA. We have predicted certain indicators that are required for determining economic growth of a country. Based on the values of economic indicators, we have predicted whether we will face any recession in upcoming 10 years for both countries. Also, we have compared two economies.
 
@@ -21,10 +21,10 @@ We have used library fredr and api key is created on fred.stlouis website. Fredr
 # 2) Missing Values
 Some of the data was not available for inflation rate and unemployment rate. To fill in the missing inflation rates values, we have taken percent change of cpi between two quarters to determine inflation rate for the present quarter.
 
-<img src = "extras/img2.PNG" />
+<img src = "extras/img2.png" />
 
 The missing unemployment rate was taken as mean of the column: 
-<img src = "extras/img3.PNG" />
+<img src = "extras/img3.png" />
 
 
 # 3) Parameter Selection:
@@ -37,7 +37,7 @@ We founded one new parameter selection package “Boruta” package. Boruta is a
 3.  At every iteration, it checks whether a real feature has a higher importance than the best of its shadow features (i.e. whether the feature has a higher Z score than the maximum Z score of its shadow features) and constantly removes features which are deemed highly unimportant.
 4.  Finally, the algorithm stops either when all features gets confirmed or rejected or it reaches a specified limit of random forest runs.
 
-<img src = "extras/img4.PNG" />
+<img src = "extras/img4.png" />
 
 The graph is plotted where green boxes indicate the important parameters, yellow represents average indicators and blue, red shows those indicators that are do not have any importance in predicting recession.
 Based on the above graph, we have selected those parameters that are green boxes as they have more significance.
@@ -60,7 +60,7 @@ To check that we have to see ACF/PACF charts.
 
 Step3: ACF/PACF charts
 
-<img src = "extras/img5.PNG" />
+<img src = "extras/img5.png" />
 
 The above graph shows the declining graph which tells GDP is stationary 
 
@@ -68,28 +68,28 @@ Step 4: Build ARIMA models
 
 We run auto.arima on train data to predict best model which will be in terms of (p,d,q). So our best model is ARIMA(2,2,2).
 
-<img src = "extras/img6.PNG" />
+<img src = "extras/img6.png" />
 
 The below screenshot shows ar1, ar2 coefficients that mean our model is good as our values are below 1.
-<img src = "extras/img7.PNG" />
+<img src = "extras/img7.png" />
 
 Now we have forecasted the values using our best model :
 
-<img src = "extras/img8.PNG" />
+<img src = "extras/img8.png" />
 
 
 # Azure ML Time Series for forecasting:
-<img src = "extras/img9.PNG" />
+<img src = "extras/img9.png" />
 
 1.  Uploaded dataset
 2.  Select columns like year, quarter as input parameters
 3.  Split data. The data is trained before Year 2015
 
-<img src = "extras/img10.PNG" />
+<img src = "extras/img10.png" />
 
 4. Execute R script. We have written our script where h=40 that is taking 40 quarters
 
-<img src = "extras/img11.PNG" />
+<img src = "extras/img11.png" />
 
 # Azure ML Studio
 Read the consolidated csv file.
@@ -124,7 +124,7 @@ Logistic regression requires numeric variables. Therefore, when you use categori
 
 ### Azure Model
 
-<img src = "extras/img12.PNG" />
+<img src = "extras/img12.png" />
 
 
 
@@ -160,11 +160,11 @@ For each of the error statistics, smaller is better. A smaller value indicates t
 
 Comparing between Random forest and Neural Network classification 
 
-<img src = "extras/img13.PNG" />
+<img src = "extras/img13.png" />
 
 Comparing between Random forest and Logistic Regression classification
 
-<img src = "extras/img14.PNG" />
+<img src = "extras/img14.png" />
 
 ##Web Service
 •   Once the classification model is ready, we set up Web Service.
@@ -172,15 +172,15 @@ Comparing between Random forest and Logistic Regression classification
 •   Then we added the saved trained model back into the experiment.
 •   Web service input and Web service output modules are added
 
-<img src = "extras/img15.PNG" />
+<img src = "extras/img15.png" />
 
 •   Now run the model and publish the web service
 
 
-<img src = "extras/img16.PNG" />
+<img src = "extras/img16.png" />
 •   On running the web service, we get the following form which can be used to invoke the web service and do prediction.
 
-<img src = "extras/img17.PNG" />
+<img src = "extras/img17.png" />
 
 ##Conclusion: 
 Thus from above it’s clear that the best model among the classification models is Two class Decision Tree as it has high accuracy rate at 86.3%. Also, the Area Under Curve (AUC) is highest in Two class Decision Tree.
