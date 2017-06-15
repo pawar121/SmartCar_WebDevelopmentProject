@@ -127,8 +127,7 @@ Logistic regression requires numeric variables. Therefore, when you use categori
 <img src = "extras/img12.png" />
 
 
-
-###ROC curve
+**ROC curve**
 
 The ROC curve plots the pairs {sensitivity, 1-specificity} as the cutoff value increases from 0 and 1
 
@@ -140,7 +139,7 @@ as such (e.g., the percentage of healthy people who are correctly identified as 
 
 • Better performance is reflected by curves that are closer to the top left corner
 
-###Confusion Matrix and other performance metrics:
+**Confusion Matrix and other performance metrics:**
 
 The following statistics are shown for our model:
 
@@ -166,7 +165,7 @@ Comparing between Random forest and Logistic Regression classification
 
 <img src = "extras/img14.png" />
 
-##Web Service
+# Web Service
 •   Once the classification model is ready, we set up Web Service.
 •   The model we trained is saved as a single Trained Model module into the module palette to the left of the experiment canvas (you can find it under Trained Models)
 •   Then we added the saved trained model back into the experiment.
@@ -182,6 +181,6 @@ Comparing between Random forest and Logistic Regression classification
 
 <img src = "extras/img17.png" />
 
-##Conclusion: 
+# Conclusion: 
 Thus from above it’s clear that the best model among the classification models is Two class Decision Tree as it has high accuracy rate at 86.3%. Also, the Area Under Curve (AUC) is highest in Two class Decision Tree.
 
