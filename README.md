@@ -1,4 +1,4 @@
-[![N|Solid](http://p9.zdassets.com/hc/settings_assets/680652/200062887/j1ixQzAxY6SfuZ2YTKbDOQ-lending_club_logo_new.png)](https://nodesource.com/products/nsolid)
+
 # Overview
 The project focuses on economic analysis of two countries India and USA. We have predicted certain indicators that are required for determining economic growth of a country. Based on the values of economic indicators, we have predicted whether we will face any recession in upcoming 10 years for both countries. Also, we have compared two economies.
 
@@ -16,7 +16,7 @@ Firstly, we did research on the economy indicators. We determined what all indic
 
 We have used library fredr and api key is created on fred.stlouis website. Fredr method is used to scrape data from website where we have mentioned the start date, end date and frequency = ”quarter”. We have taken data quarterly for all the selected indicators.
 
-<img src ="extras/img1.PNG" />
+<img src ="extras/img1.png" />
 
 # 2) Missing Values
 Some of the data was not available for inflation rate and unemployment rate. To fill in the missing inflation rates values, we have taken percent change of cpi between two quarters to determine inflation rate for the present quarter.
